@@ -2,6 +2,7 @@ const fs = require('fs');
 const extras = exports;
 
 let seed = 0;
+let logFileName = "logs/" + new Date().toISOString().slice(0,10).replace(/-/g,"");
 
 extras.generateId = function () {
     return Date.now() + seed++;
@@ -19,7 +20,7 @@ extras.saveArticles = function (data) {
 };
 
 extras.logReq = function (url, body, time) {
-    fs.appendFile('logs/' + Date.now().toISOString().slice(0,10),replace(/-/g, ''),
+    fs.appendFile(logFileName,
         time + " :\n" + "\turl : " + url + "\n\tbody : " + body + "\n", err => {
             if (err) {
                 console.error(err)

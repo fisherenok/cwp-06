@@ -14,22 +14,20 @@ const handlers = {
     '/api/articles/update':  articles.update,
     '/api/articles/delete':  articles.delete,
     '/api/comments/create':  comments.create,
-    '/api/comments/delete':  comments.delete
+    '/api/comments/delete':  comments.delete,
+    '/api/logs': extras.sendLog
 };
 
 const server = http.createServer((req, res) => {
     parseBodyJson(req, (err, payload) => {
         const handler = getHandler(req.url);
-
         handler(req, res, payload, (err, result) => {
             if (err) {
                 res.statusCode = err.code;
                 res.setHeader('Content-Type', 'application/json');
                 res.end( JSON.stringify(err) );
-
                 return;
             }
-
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
             res.end( JSON.stringify(result) );
@@ -47,7 +45,6 @@ function getHandler(url) {
 
 function sum(req, res, payload, cb) {
     const result = { c: payload.a + payload.b };
-
     cb(null, result);
 }
 
