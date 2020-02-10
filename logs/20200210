@@ -1,0 +1,25 @@
+[{
+	"time": "2020-02-10T11:16:08.451Z",
+	"url": "/api/articles/readall",
+	"body": "{\n\t\"sortField\": \"title\",\n\t\"includeDeps\": true,\n\t\"sortOrder\": \"desc\"\n}"
+},{
+	"time": "2020-02-10T11:16:13.976Z",
+	"url": "/api/articles/readall",
+	"body": "{\n\t\"sortField\": \"id\",\n\t\"includeDeps\": true,\n\t\"sortOrder\": \"desc\"\n}"
+},{
+	"time": "2020-02-10T11:16:17.882Z",
+	"url": "/api/articles/readall",
+	"body": "{\n\t\"sortField\": \"date\",\n\t\"includeDeps\": true,\n\t\"sortOrder\": \"desc\"\n}"
+},{
+	"time": "2020-02-10T11:16:20.423Z",
+	"url": "/api/articles/readall",
+	"body": "{\n\t\"sortField\": \"date\",\n\t\"includeDeps\": true,\n\t\"sortOrder\": \"asc\"\n}"
+},{
+	"time": "2020-02-10T11:16:24.910Z",
+	"url": "/api/articles/readall",
+	"body": "{\n\t\"sortField\": \"date\",\n\t\"includeDeps\": false,\n\t\"sortOrder\": \"asc\"\n}"
+},{
+	"time": "2020-02-10T11:16:46.066Z",
+	"url": "/api/logs",
+	"body": ""
+}
